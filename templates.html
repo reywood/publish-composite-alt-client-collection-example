@@ -1,0 +1,27 @@
+<template name="page1">
+    <p><a href="{{pathFor 'page2'}}">Go to page 2</a></p>
+
+    {{> articles}}
+</template>
+
+<template name="page2">
+    <p><a href="{{pathFor 'page1'}}">Go to page 1</a></p>
+
+    {{> articles}}
+</template>
+
+<template name="articles">
+    <b>Articles</b><br>
+    <ul>
+        {{#each articles}}
+            <li>{{title}}</li>
+        {{/each}}
+    </ul>
+
+    <b>Related Articles</b><br>
+    <ul>
+        {{#each relatedArticles}}
+            <li>{{title}}</li>
+        {{/each}}
+    </ul>
+</template>
