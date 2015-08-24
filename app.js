@@ -40,12 +40,23 @@ if (Meteor.isServer) {
                 relatedTo: 'article1'
             });
             Articles.insert({
+                _id: 'article1.2',
+                title: 'Article 1.2',
+                relatedTo: 'article1'
+            });
+
+            Articles.insert({
                 _id: 'article2',
                 title: 'Article 2'
             });
             Articles.insert({
                 _id: 'article2.1',
                 title: 'Article 2.1',
+                relatedTo: 'article2'
+            });
+            Articles.insert({
+                _id: 'article2.2',
+                title: 'Article 2.2',
                 relatedTo: 'article2'
             });
         }
